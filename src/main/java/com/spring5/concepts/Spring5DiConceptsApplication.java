@@ -8,6 +8,8 @@ import com.spring5.concepts.controllers.A0MyController;
 import com.spring5.concepts.controllers.A1SetterInjectedController;
 import com.spring5.concepts.controllers.A2PropertyInjectedController;
 import com.spring5.concepts.controllers.A3ConstructorInjectedController;
+import com.spring5.concepts.controllers.A4SetterInjectedController4Qualifier;
+import com.spring5.concepts.controllers.A5ConstructorInjectedController4Qualifier;
 
 @SpringBootApplication
 public class Spring5DiConceptsApplication {
@@ -30,6 +32,13 @@ public class Spring5DiConceptsApplication {
 
 		//Constructor Injection
 		System.out.println(ctx.getBean(A3ConstructorInjectedController.class).sayHello());
+		
+		//Setter Injection
+		System.out.println(ctx.getBean(A4SetterInjectedController4Qualifier.class).sayHello());
+		
+		//Constructor Injection
+		System.out.println(ctx.getBean(A5ConstructorInjectedController4Qualifier.class).sayHello());
+
 
 	}
 
