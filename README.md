@@ -15,3 +15,13 @@ DI with Concrete Classes should be avoided
 	• Allows runtime to decide implementation to inject
 	• Follows Interface Segregation Principle of SOLID
 	• Also, makes your code more testable
+	
+	
+## Brances
+*  remotes/origin/a1spring-context-example
+* remotes/origin/a2-manual-di
+* remotes/origin/a3-spring5-di
+* remotes/origin/a4-qualifier-use-in-controller
+* remotes/origin/a5-primary-annotation
+* remotes/origin/master
+
