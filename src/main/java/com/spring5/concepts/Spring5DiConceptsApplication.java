@@ -16,7 +16,7 @@ public class Spring5DiConceptsApplication {
 		
 		//get the bean by ClassName but the first letter as small
 		//The Bean is created by the Spring Context handler and we dont have to instantiate a new bean object
-		MyController controller = (MyController) ctx.getBean("myController");
+		MyController controller = (MyController) ctx.getBean("testing-today");
 		controller.hello();
 		
 	}
