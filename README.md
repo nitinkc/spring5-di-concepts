@@ -43,4 +43,11 @@ default profile is added
 
 @Profile({"en","default"})
 
+Component Scan : By default the package containing the main method is scanned. In addition to add other
+packages, following annotation is used.
+
+```java
+@ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services"})
+``` 
+
 
