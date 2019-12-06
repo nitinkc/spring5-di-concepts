@@ -17,6 +17,7 @@ public class A1SetterInjectedController {
 
     //Setter Injection
     @Autowired
+    //@Qualifier("setterGreetingService")
     public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }

@@ -1,9 +1,11 @@
 # Dependency Injection Concepts using Spring 5
 
+JUnit - to mimic manual Dependency injection
+           
 ### Dependency Injection is done in 3 ways
 
 	• By class properties - least preferred
-	• Using private properties is <span style="color:red">**EVIL**</span>
+	    •  Using private properties is <span style="color:red">**EVIL**</span>
 	• By Setters - Area of much debate
 	• By Constructor - Most Preferred
 
@@ -15,7 +17,9 @@ DI with Concrete Classes should be avoided
 	• Allows runtime to decide implementation to inject
 	• Follows Interface Segregation Principle of SOLID
 	• Also, makes your code more testable
-	
+
+@Primary - Multiple beans of the same type and
+           one is intended to go in by default 
 	
 ## Brances
 *  remotes/origin/a1spring-context-example

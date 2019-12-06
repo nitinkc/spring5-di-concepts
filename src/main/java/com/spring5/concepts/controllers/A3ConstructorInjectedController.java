@@ -16,6 +16,6 @@ public class A3ConstructorInjectedController {
     }
 
     public String sayHello(){
-        return greetingService.greet("A3ConstructorInjectedController");
+        return greetingService.greet(" :: A3ConstructorInjectedController");
     }
 }
