@@ -3,7 +3,7 @@ package com.spring5.concepts.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.spring5.concepts.services.GreetingServiceImpl;
+import com.spring5.services.GreetingServiceImpl;
 
 //The annotation marks this as a Spring Component
 //that tells Spring Framework to manage this as a spring bean.

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import com.spring5.concepts.services.GreetingService;
+import com.spring5.services.GreetingService;
 
 @Controller
 public class A4SetterInjectedController4Qualifier {
