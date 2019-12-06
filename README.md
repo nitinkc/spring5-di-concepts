@@ -20,6 +20,9 @@ DI with Concrete Classes should be avoided
 
 @Primary - Multiple beans of the same type and
            one is intended to go in by default 
+           
+@Profile - making a profile active from the application.properties
+
 	
 ## Brances
 *  remotes/origin/a1spring-context-example
