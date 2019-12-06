@@ -23,6 +23,9 @@ DI with Concrete Classes should be avoided
            
 @Profile - making a profile active from the application.properties
 
+default profile is added 
+
+@Profile({"en","default"})
 	
 ## Brances
 *  remotes/origin/a1spring-context-example

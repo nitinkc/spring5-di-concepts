@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import com.spring5.concepts.services.GreetingServiceImpl;
 
 //The annotation marks this as a Spring Component
-//thats tells Spring Framework to manage this as a spring bean.
+//that tells Spring Framework to manage this as a spring bean.
 @Controller
 public class A2PropertyInjectedController {
 	
@@ -15,9 +15,10 @@ public class A2PropertyInjectedController {
 	@Autowired
 	public GreetingServiceImpl greetingService;
 
+	/*
+	* greetingService is a property and
+	* */
     public String sayHello(){
         return greetingService.greet("A2PropertyInjectedController");
     }
-
-
 }
