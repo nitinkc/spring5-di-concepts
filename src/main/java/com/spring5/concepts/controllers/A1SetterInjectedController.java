@@ -10,11 +10,6 @@ import com.spring5.concepts.services.GreetingService;
 public class A1SetterInjectedController {
 	
 	private GreetingService greetingService;
-
-    public String sayHello(){
-        return greetingService.greet("A1SetterInjectedController");
-    }
-
     //Setter Injection
     @Autowired
     //@Qualifier("setterGreetingService")
@@ -22,4 +17,7 @@ public class A1SetterInjectedController {
         this.greetingService = greetingService;
     }
 
+    public String sayHello(){
+        return greetingService.greet("A1SetterInjectedController");
+    }
 }

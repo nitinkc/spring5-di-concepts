@@ -8,18 +8,15 @@ import com.spring5.concepts.services.GreetingService;
 
 @Controller
 public class A4SetterInjectedController4Qualifier {
-	
 
 	private GreetingService greetingService;
 
-    public String sayHello(){
-        return greetingService.greet(" :: A4SetterInjectedController4Qualifier");
-    }
-
-    //Setter Injection instead of @Autowired, @Qualifier is used
-    @Autowired
+	@Autowired
     //@Qualifier("setterGreetingService")
     public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
+    }
+    public String sayHello(){
+        return greetingService.greet(" :: A4SetterInjectedController4Qualifier");
     }
 }

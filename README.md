@@ -7,7 +7,23 @@ JUnit - to mimic manual Dependency injection
 	• By class properties - least preferred
 	    •  Using private properties is <span style="color:red">**EVIL**</span>
 	• By Setters - Area of much debate
+	
+```java
+private GreetingService greetingService;
+@Autowired
+//@Qualifier("setterGreetingService")
+public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService) {
+    this.greetingService = greetingService;
+}
+```
 	• By Constructor - Most Preferred
+```java
+private GreetingService greetingService;
+//Constructor, With Spring 5 no need to explicitly mention @Autowired, but its a good practice
+public A3ConstructorInjectedController(GreetingService greetingService) {
+    this.greetingService = greetingService;
+}
+```
 
 DI can be done with Concrete Classes or with Interfaces
 
@@ -26,12 +42,5 @@ DI with Concrete Classes should be avoided
 default profile is added 
 
 @Profile({"en","default"})
-	
-## Brances
-*  remotes/origin/a1spring-context-example
-* remotes/origin/a2-manual-di
-* remotes/origin/a3-spring5-di
-* remotes/origin/a4-qualifier-use-in-controller
-* remotes/origin/a5-primary-annotation
-* remotes/origin/master
+
 
