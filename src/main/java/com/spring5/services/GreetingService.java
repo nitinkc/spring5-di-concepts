@@ -1,4 +1,4 @@
-package com.spring5.concepts.services;
+package com.spring5.services;
 
 public interface GreetingService {
 	

@@ -10,8 +10,10 @@ import com.spring5.concepts.controllers.A2PropertyInjectedController;
 import com.spring5.concepts.controllers.A3ConstructorInjectedController;
 import com.spring5.concepts.controllers.A4SetterInjectedController4Qualifier;
 import com.spring5.concepts.controllers.A5ConstructorInjectedController4Qualifier;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services"})
 public class Spring5DiConceptsApplication {
 
 	public static void main(String[] args) {
