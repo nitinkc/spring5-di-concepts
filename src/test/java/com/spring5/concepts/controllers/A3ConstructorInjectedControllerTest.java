@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.spring5.concepts.services.GreetingServiceImpl;
+import com.spring5.services.GreetingServiceImpl;
 
 public class A3ConstructorInjectedControllerTest {
 	private A3ConstructorInjectedController constructorInjectedController;

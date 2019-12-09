@@ -10,20 +10,22 @@ import com.spring5.concepts.controllers.A2PropertyInjectedController;
 import com.spring5.concepts.controllers.A3ConstructorInjectedController;
 import com.spring5.concepts.controllers.A4SetterInjectedController4Qualifier;
 import com.spring5.concepts.controllers.A5ConstructorInjectedController4Qualifier;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services"})
 public class Spring5DiConceptsApplication {
 
 	public static void main(String[] args) {
 
 		
-		//Getting in the context of the 
+		//Getting the handle of the context
 		ApplicationContext ctx = SpringApplication.run(Spring5DiConceptsApplication.class, args);
 		
 		//get the bean by ClassName but the first letter as small
 		//The Bean is created by the Spring Context handler and we don't have to instantiate a new bean object
 		A0MyController controller = (A0MyController) ctx.getBean("a0MyController");
-		controller.hello(" from basic Controller");
+		controller.hello("STEP 1 : Hello from basic Controller");
 		
 		//Setter Injection
 		System.out.println(ctx.getBean(A1SetterInjectedController.class).sayHello());
