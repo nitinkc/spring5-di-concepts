@@ -15,6 +15,7 @@ import com.spring5.concepts.controllers.A5ConstructorInjectedController4Qualifie
 public class Spring5DiConceptsApplication {
 
 	public static void main(String[] args) {
+
 		
 		//Getting in the context of the 
 		ApplicationContext ctx = SpringApplication.run(Spring5DiConceptsApplication.class, args);
