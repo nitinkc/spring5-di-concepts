@@ -20,7 +20,6 @@ public class Spring5DiConceptsApplication {
 
 	public static void main(String[] args) {
 
-		
 		//Getting the handle of the context
 		ApplicationContext ctx = SpringApplication.run(Spring5DiConceptsApplication.class, args);
 		
@@ -50,7 +49,6 @@ public class Spring5DiConceptsApplication {
 
 		//Config property file
 		FakeJMSBroaker fakeJMSBroaker = (FakeJMSBroaker) ctx.getBean(FakeJMSBroaker.class);
-		System.err.println("########## FAKE JMS URL ############"+fakeJMSBroaker.getJms_url());
+		System.err.println("########## FAKE JMS URL ############  "+fakeJMSBroaker.getJms_url());
 	}
-
 }
