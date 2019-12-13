@@ -74,4 +74,3 @@ If application.properties or application.jml is used, the Spring will automatica
 Read Externalized Configuration - 
 
 [https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config]
-

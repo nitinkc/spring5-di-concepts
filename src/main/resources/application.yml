@@ -3,3 +3,12 @@ nitin:
     username: Nitin JMS
     pwd: Nitin_password
     dburl: http://fakeFROM-APP-YML.JMS.path.com
+
+#File Separator
+---
+spring:
+  profiles: de
+
+nitin:
+  jms:
+    dburl: JSM URL $$$$$
