@@ -1,5 +1,6 @@
 package com.spring5.concepts;
 
+import com.spring5.exampleBean.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +14,7 @@ import com.spring5.concepts.controllers.A5ConstructorInjectedController4Qualifie
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services"})
+@ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services", "com.spring5"})
 public class Spring5DiConceptsApplication {
 
 	public static void main(String[] args) {
@@ -42,7 +43,9 @@ public class Spring5DiConceptsApplication {
 		//Constructor Injection
 		System.out.println(ctx.getBean(A5ConstructorInjectedController4Qualifier.class).sayHello());
 
-
+		//Config property file
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+		System.err.println("########## FAKE URL ############"+fakeDataSource.getUrl());
 	}
 
 }
