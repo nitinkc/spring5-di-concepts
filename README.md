@@ -50,4 +50,28 @@ packages, following annotation is used.
 @ComponentScan(basePackages = {"com.spring5.concepts","com.spring5.services"})
 ``` 
 
+### External Property
+
+```java
+@Configuration
+@PropertySources({
+        @PropertySource("classpath:datasource.properties"),
+        @PropertySource("classpath:jms.properties")
+})
+public class PropertyConfig {
+
+    @Value("${nitin.username}")
+    String user;
+    @Value("${nitin.pwd}")
+    String password;
+    @Value("${nitin.dburl}")
+    String url;
+}
+```
+
+If application.properties or application.jml is used, the Spring will automatically wire them in for the use.
+
+Read Externalized Configuration - 
+
+[https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config]
 

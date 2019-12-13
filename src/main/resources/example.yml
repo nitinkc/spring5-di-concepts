@@ -26,9 +26,6 @@ colon_string: "in this sting : Colon is there"
 include_new_lines: |
   sadsda
   asd
-  sad
-  sad
-  sad
 
 ignore_new_lines: >
   dsad
