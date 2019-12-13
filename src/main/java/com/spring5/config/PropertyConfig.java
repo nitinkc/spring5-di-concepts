@@ -12,13 +12,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 /**
  * Created by nichaurasia on Friday, December/13/2019 at 1:05 AM
  */
+
 @Configuration
-//@PropertySource({"classpath:datasource.properties","classpath:jms.properties"})
-//After Spring 4
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")
-})
 public class PropertyConfig {
 
     @Value("${nitin.username}")
@@ -28,6 +23,7 @@ public class PropertyConfig {
     @Value("${nitin.dburl}")
     String url;
 
+    //Reading the property values from the application.yml file OR JMS.properties
     @Value("${nitin.jms.username}")
     String jms_user;
     @Value("${nitin.jms.pwd}")
@@ -48,17 +44,10 @@ public class PropertyConfig {
     @Bean
     public FakeJMSBroaker fakeJMSBroaker(){
         FakeJMSBroaker fakeJMSBroaker = new FakeJMSBroaker();
-        fakeJMSBroaker.setJms_user(user);
-        fakeJMSBroaker.setJms_password(password);
-        fakeJMSBroaker.setJms_url(url);
+        fakeJMSBroaker.setJms_user(jms_user);
+        fakeJMSBroaker.setJms_password(jms_password);
+        fakeJMSBroaker.setJms_url(jms_url);
 
         return fakeJMSBroaker;
-    }
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer =
-                new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
     }
 }

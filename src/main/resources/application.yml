@@ -1,0 +1,5 @@
+nitin:
+  jms:
+    username: Nitin JMS
+    pwd: Nitin_password
+    dburl: http://fakeFROM-APP-YML.JMS.path.com

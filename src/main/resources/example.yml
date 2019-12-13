@@ -1,0 +1,35 @@
+# This is a comment
+
+name: Nitin
+
+names: #In-line Comment
+  - Nitin
+  - Kirti
+  - Chaurasia
+
+pound_sign: "#"
+
+book:
+  author: Nitin Chaurasia
+  publisher: Random House
+
+truth: yes
+another_truth: True
+yet_another_truth: true
+
+false: no #No, false, FALSE
+
+string_val: "adsad ad ad ad a dad"
+
+colon_string: "in this sting : Colon is there"
+
+include_new_lines: |
+  sadsda
+  asd
+  sad
+  sad
+  sad
+
+ignore_new_lines: >
+  dsad
+  sadf
