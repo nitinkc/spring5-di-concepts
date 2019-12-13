@@ -1,6 +1,7 @@
 package com.spring5.concepts;
 
 import com.spring5.exampleBean.FakeDataSource;
+import com.spring5.exampleBean.FakeJMSBroaker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -46,6 +47,10 @@ public class Spring5DiConceptsApplication {
 		//Config property file
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		System.err.println("########## FAKE URL ############"+fakeDataSource.getUrl());
+
+		//Config property file
+		FakeJMSBroaker fakeJMSBroaker = (FakeJMSBroaker) ctx.getBean(FakeJMSBroaker.class);
+		System.err.println("########## FAKE JMS URL ############"+fakeJMSBroaker.getJms_url());
 	}
 
 }

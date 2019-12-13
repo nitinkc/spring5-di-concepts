@@ -1,18 +1,24 @@
 package com.spring5.config;
 
 import com.spring5.exampleBean.FakeDataSource;
-import org.springframework.beans.factory.annotation.Configurable;
+import com.spring5.exampleBean.FakeJMSBroaker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
  * Created by nichaurasia on Friday, December/13/2019 at 1:05 AM
  */
 @Configuration
-@PropertySource("classpath:datasource.properties")
+//@PropertySource({"classpath:datasource.properties","classpath:jms.properties"})
+//After Spring 4
+@PropertySources({
+        @PropertySource("classpath:datasource.properties"),
+        @PropertySource("classpath:jms.properties")
+})
 public class PropertyConfig {
 
     @Value("${nitin.username}")
@@ -22,6 +28,12 @@ public class PropertyConfig {
     @Value("${nitin.dburl}")
     String url;
 
+    @Value("${nitin.jms.username}")
+    String jms_user;
+    @Value("${nitin.jms.pwd}")
+    String jms_password;
+    @Value("${nitin.jms.dburl}")
+    String jms_url;
 
     @Bean
     public FakeDataSource fakeDataSource(){
@@ -32,6 +44,17 @@ public class PropertyConfig {
 
         return fakeDataSource;
     }
+
+    @Bean
+    public FakeJMSBroaker fakeJMSBroaker(){
+        FakeJMSBroaker fakeJMSBroaker = new FakeJMSBroaker();
+        fakeJMSBroaker.setJms_user(user);
+        fakeJMSBroaker.setJms_password(password);
+        fakeJMSBroaker.setJms_url(url);
+
+        return fakeJMSBroaker;
+    }
+
     @Bean
     public static PropertySourcesPlaceholderConfigurer properties(){
         PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer =
